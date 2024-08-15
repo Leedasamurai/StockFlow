@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* default boardes */
+*,
+*::before *::after {
+  box-sizing: border-box;
+}
+/* 
+  height - setting default for height
+  width - setting default for weidth
+  bg-gray - setting background colour to gray
+  text-gray - setting text to a darker grey.
+*/
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  width: 100%;
+  @apply text-sm;
+  @apply bg-gray-500;
+  @apply text-gray-900;
+}
