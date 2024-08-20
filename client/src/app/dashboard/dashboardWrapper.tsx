@@ -2,10 +2,9 @@
 
 import React, { useEffect } from "react";
 import Navbar from "@/app/(components)/Navbar";
-import Sidebar from "../(components)/Sidebar";
+import Sidebar from "@/app/(components)/Sidebar";
 import StoreProvider, { useAppSelector } from "../redux";
 
-// connecting nextjs app with redux
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   const isSidebarCollapsed = useAppSelector(
     (state) => state.global.isSidebarCollapsed
@@ -39,7 +38,6 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-// on layout it will cover the entire website with store provider
 const DashboardWrapper = ({ children }: { children: React.ReactNode }) => {
   return (
     <StoreProvider>

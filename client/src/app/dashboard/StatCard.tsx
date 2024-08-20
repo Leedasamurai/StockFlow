@@ -30,7 +30,7 @@ const StatCard = ({
     value >= 0 ? "text-green-500" : "text-red-500";
 
   return (
-    <div className="md:row-span-1 xl:row-span-2 bg-white col-span-1 shadow-md rounded-2xl flex flex-col justify-between">
+    <div className="md:row-span-1 xl:row-span-1 bg-white col-span-1 shadow-md rounded-2xl flex flex-col justify-between">
       {/* HEADER */}
       <div>
         <div className="flex justify-between items-center mb-2 px-5 pt-4">
@@ -48,7 +48,7 @@ const StatCard = ({
         <div className="flex-1">
           {details.map((detail, index) => (
             <React.Fragment key={index}>
-              <div className="flex items-center justify-between my-4">
+              <div className="flex items-center justify-between my-3">
                 <span className="text-gray-500">{detail.title}</span>
                 <span className="font-bold text-gray-800">{detail.amount}</span>
                 <div className="flex items-center">

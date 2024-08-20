@@ -19,7 +19,7 @@ const CardPurchaseSummary = () => {
   const lastDataPoint = purchaseData[purchaseData.length - 1] || null;
 
   return (
-    <div className="flex flex-col justify-between row-span-2 xl:row-span-3 col-span-1 md:col-span-2 xl:col-span-1 bg-white shadow-md rounded-2xl">
+    <div className="flex flex-col justify-between row-span-2 xl:row-span-2 col-span-1 md:col-span-2 xl:col-span-1 bg-white shadow-md rounded-2xl">
       {isLoading ? (
         <div className="m-5">Loading...</div>
       ) : (
@@ -62,7 +62,7 @@ const CardPurchaseSummary = () => {
             </div>
 
             {/* Charts */}
-            <ResponsiveContainer width="100%" height={350} className="p-2">
+            <ResponsiveContainer width="100%" height={200} className="px-7">
               <AreaChart
                 data={purchaseData}
                 margin={{ top: 0, right: 0, left: -50, bottom: 45 }}
