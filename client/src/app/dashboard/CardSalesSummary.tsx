@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useGetDashboardMetricsQuery } from "../state/api";
+import { useGetDashboardMetricsQuery } from "@/app/state/api";
 import { TrendingUp } from "lucide-react";
 import {
   Bar,
@@ -99,7 +99,6 @@ const CardSalesSummary = () => {
                   }}
                 />
                 <YAxis
-                  dataKey="date"
                   tickFormatter={(value) => {
                     return `$${(value / 1000000).toFixed(0)}m`;
                   }}
@@ -111,6 +110,14 @@ const CardSalesSummary = () => {
                   formatter={(value: number) => [
                     `$${value.toLocaleString("en")}`,
                   ]}
+                  labelFormatter={(label) => {
+                    const date = new Date(label);
+                    return date.toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    });
+                  }}
                 />
                 <Bar
                   dataKey="totalValue"
